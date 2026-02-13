@@ -4,12 +4,16 @@ export const columnNames = [
         header: "ID"
     },
     {
-        accessorKey:"first_name",
+        accessorKey:"firstName",
         header:"First Name"
     },
     {
-        accessorKey:"last_name",
+        accessorKey:"lastName",
         header:"Last Name"
+    },
+    {
+        accessorKey:"gender",
+        header:"Gender"
     },
     {
         accessorKey:"email",
