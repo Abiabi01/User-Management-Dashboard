@@ -14,7 +14,6 @@ export const fetchUsers = createAsyncThunk(
     async ({page,search}, { rejectWithValue }) => {
         try {
             const data = await fetchUsersAPI(page,search)
-
             return data
         } catch (error) {
             return rejectWithValue(error.message)
@@ -47,7 +46,6 @@ const userSlice = createSlice(
                         state.error = action.payload
                 })
     }
-
     }
 )
 

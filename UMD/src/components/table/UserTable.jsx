@@ -1,6 +1,7 @@
 import { getCoreRowModel, getSortedRowModel, useReactTable } from "@tanstack/react-table"
 import { useState } from "react"
 import { Table, TableCell, TableHead, TableHeader, TableRow, TableBody } from "../ui/table"
+import { ArrowUpDownIcon } from "lucide-react"
 
 const UserTable = ({ data, columns }) => {
     const [sorting, setSorting] = useState([])
@@ -25,7 +26,9 @@ const UserTable = ({ data, columns }) => {
                                 headerGroup.headers.map((header) => {
                                     return (
                                         <TableHead key={header.id} className="cursor-pointer" onClick={header.column.getToggleSortingHandler()}>
+                                            
                                             {header.column.columnDef.header}
+                                            
                                             {{
                                                 asc: " 🔼",
                                                 desc: " 🔽",
